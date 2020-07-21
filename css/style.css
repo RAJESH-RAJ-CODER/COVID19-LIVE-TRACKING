@@ -1,0 +1,29 @@
+.main { 
+    text-align:center; 
+} 
+.marq { 
+    padding-top:1px; 
+    padding-bottom:1px; 
+} 
+.geek1 { 
+    font-size:25px; 
+    font-weight:bold italic; 
+    color:white; 
+    padding-bottom:2px; 
+} 
+.blink_me,.text-center1{
+    animation: blinker 1s linear infinite;
+    color:red;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+  .col{
+      color:red;
+  }
+  .text-center1{
+      text-align:center;
+  }

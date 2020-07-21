@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID19 Application</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="angular/angapp.js"></script>
+    <script src="js/myscript.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand blink_me col" href="#">COVID19 UPDATE   </a>
+         <!--
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown link
+              </a>
+              </li>
+               
+                    
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+               
+              </div>
+            </li>
+          </ul>
+        </div>
+         -->
+      </nav>
+    <div class = "main"> 
+        <marquee class="marq" bgcolor = "black" direction = "left" loop="" > 
+            <div class="geek1">Wash your hands often with soap and water for at least 20 seconds. Use an alcohol-based hand sanitizer that contains at least 60% alcohol if soap and water are not available.</div> 
+        <!---->     
+        </marquee> 
+        </div>
+    <!--
+        <h1>This is my home Page</h1>
+    -->
+    <div class="container">
+        <div class="jumbotron py-3">
+            <h1 class="text-center1">{{title}}</h1>
+            <p class="pt-3"> The WHO’s standard recommendations for the general public to help prevent the spread of respiratory diseases like COVID-19 are as follows, which include hand and respiratory hygiene:<br>
+                
+                -          Avoid close contact with people who are sick.<br>
+                
+                -          Avoid touching your eyes, nose, and mouth with unwashed hands.<br>
+                -          Cover your cough or sneeze with a tissue, then throw the tissue away <br> 
+                
+                -          Clean and disinfect frequently touched objects and surfaces. </p>
+           <!-- <button ng-click="change value()">Click</button>-->
+            <div class="row text-center">
+                <div class="col-md-4">
+                <div class="card bg-warning text-white">
+                    <div class="card-body">
+                        <h3>Conferm Cases</h3>
+                        <h3>{{all_data.confirmed.value}}</h3>
+                    </div>
+                </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-success text-white">
+                        <div class="card-body">
+                            <h3>Recovered Cases</h3>
+                            <h3>{{all_data.recovered.value}}</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-danger text-white">
+                        <div class="card-body">
+                            <h3>Dead Cases</h3>
+                            <h3>{{all_data.deaths.value}}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="text" class="form-control mt-4"  
+            placeholder="Enter Country Here"
+            ng-model="c"
+            ng-change="get_c_data()"
+            />
+           <!--
+               c_ data
+           -->
+           <div class="row text-center">
+            <div class="col-md-4">
+            <div class="card bg-warning text-white">
+                <div class="card-body">
+                    <h3>Conferm Cases</h3>
+                    <h3>{{c_data.confirmed.value}}</h3>
+                </div>
+            </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-success text-white">
+                    <div class="card-body">
+                        <h3>Recovered Cases</h3>
+                        <h3>{{c_data.recovered.value}}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-danger text-white">
+                    <div class="card-body">
+                        <h3>Dead Cases</h3>
+                        <h3>{{c_data.deaths.value}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+           <div class="container-fluid" ng-if="c_data">
+               <h1 class="text-center mt-4 text-ippercase">{{c}}</h1>
+
+           </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
